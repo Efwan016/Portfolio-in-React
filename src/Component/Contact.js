@@ -29,7 +29,7 @@ class Contact extends Component {
                 </Fade>
 
                 <div className="row">
-                    <Slide left duration={1000}>
+                    <Slide left duration={1000} triggerOnce>
                         <div className="eight columns">
                             <form action="" method="post" id="contactForm" name="contactForm">
                                 <fieldset>
@@ -79,7 +79,7 @@ class Contact extends Component {
                                         </label>
                                         <textarea
                                             cols="50"
-                                            rows="15"
+                                            rows="25"
                                             id="contactMessage"
                                             name="contactMessage"
                                         ></textarea>
