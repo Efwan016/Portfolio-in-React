@@ -486,7 +486,7 @@ Tambahkan atau pastikan ini ada */
 }
 .portfolio-item {
   width: 280px;
-  background: lightcoral;
+  background: rgba(240, 128, 128, 0.393);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
@@ -494,7 +494,7 @@ Tambahkan atau pastikan ini ada */
   text-align: center;
 }
 .portfolio-item .item-wrap {
-   background: lightpink;
+   background: rgba(255, 182, 193, 0.406);
    overflow: hidden;
    position: relative;
 
@@ -523,7 +523,7 @@ Tambahkan atau pastikan ini ada */
 .portfolio-item a {
   display: block;
   padding: 10px;
-  color: #00cccc;
+  color: #fdfdfd;
   text-decoration: none;
   font-weight: bold;
 }
@@ -688,7 +688,7 @@ Tambahkan atau pastikan ini ada */
   box-shadow: 0 0 10px #000;
 }
 
-.popup-modal a:hover {	color: #00CCCC; }
+.popup-modal a:hover {	color: #ffffff; }
 .popup-modal a.popup-modal-dismiss { margin-left: 24px; }
 
 
@@ -1062,15 +1062,19 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 .certificates-grid {
+    background-image: url("../image/bg-04.jpg");
+   background-size: cover;
+   background-position: right;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 30px;
+  margin-top: 20px;
+  color: #FFFFFF;
 }
 
 .cert-card {
-  background: #fff;
-  padding: 20px;
+  background: #524d4daf;
+  padding: 10px;
   text-align: center;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -1082,6 +1086,12 @@ call-to-action .button {
   border-radius: 8px;
   margin-bottom: 15px;
 }
+.cert-title {
+  color: #fffefe; /* Ganti dengan warna yang kamu suka */
+  font-weight: bold;
+}
+
+
 
 
 /* ------------------------------------------------------------------ */

@@ -16,7 +16,7 @@ const Certificates = ({ data }) => {
             {data.map((cert, index) => (
               <div className="cert-card" key={index}>
                 <img src={cert.image} alt={cert.title} className="cert-img" />
-                <h4>{cert.title}</h4>
+                <h4 className="cert-title">{cert.title}</h4>
                 <p>{cert.issuer} — {cert.date}</p>
                 <a
                   href={cert.link}

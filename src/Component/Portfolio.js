@@ -38,7 +38,7 @@ class Portfolio extends Component {
                                 href={projects.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={{ color: "#00cccc", textDecoration: "none", fontWeight: "bold" }}
+                                style={{ color: "#fff", textDecoration: "none", fontWeight: "bold" }}
                             >
                                 {projects.title}
                             </a>
