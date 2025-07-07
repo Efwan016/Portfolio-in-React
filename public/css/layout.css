@@ -935,7 +935,7 @@ call-to-action .button {
 #contact .section-head { margin-bottom: 42px; }
 
 #contact a, #contact a:visited  { color: #0762f9; }
-#contact a:hover, #contact a:focus { color: #fff; }
+#contact a:hover, #contact a:focus { color: #ffffff; }
 
 #contact h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
@@ -1104,13 +1104,21 @@ footer .social-links {
    margin: 18px 0 30px 0;
    padding: 0;
    font-size: 30px;
+   text-align: center;
+   list-style: none;
 }
 footer .social-links li {
     display: inline-block;
-    margin: 0;
+    margin: 0 21px; /* Kasih jarak kanan kiri */
     padding: 0;
-    margin-left: 42px;
-    color: #F06000;
+}
+footer .social-links li a {
+   color: #f06000;
+   transition: all 0.3s ease;
+}
+footer .social-links li a :hover {
+   color: #FFFFFF; /* Putih saat hover (bisa di sesuaikan */
+   transform: scale;
 }
 
 footer .social-links li:first-child { margin-left: 0; }
@@ -1145,7 +1153,7 @@ footer .social-links li:first-child { margin-left: 0; }
 
 
 .social .btn:first-child{
-   margin-right: 30px;
+   margin-right: 30px;;
 }
 .social .btn{
    padding-left: 30px;
