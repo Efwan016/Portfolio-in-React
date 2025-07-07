@@ -5,38 +5,38 @@ import { Fade } from "react-awesome-reveal";
 class Header extends Component {
     componentDidMount() {
         setTimeout(() => {
-        const sections = document.querySelectorAll("section, div[id]");
-        const navLinks = document.querySelectorAll("#nav li");
-        
-        window.addEventListener("scroll", () => {
-            let current = "";
+            const sections = document.querySelectorAll("section, div[id]");
+            const navLinks = document.querySelectorAll("#nav li");
 
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (window.scrollY >= sectionTop - 100) {
-                    current = section.getAttribute("id");
-                }
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= sectionTop - 100) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((li) => {
+                    li.classList.remove("current");
+                    const anchor = li.querySelector("a");
+                    if (anchor && anchor.getAttribute("href") === `#${current}`) {
+                        li.classList.add("current");
+                    }
+                });
             });
 
-            navLinks.forEach((li) => {
-                li.classList.remove("current");
-                const anchor = li.querySelector("a");
-                if (anchor && anchor.getAttribute("href") === `#${current}`) {
-                    li.classList.add("current");
-                }
+            // Tambahkan efek current saat klik langsung
+            const navAnchors = document.querySelectorAll("#nav a");
+            navAnchors.forEach((a) => {
+                a.addEventListener("click", function () {
+                    navLinks.forEach((li) => li.classList.remove("current"));
+                    this.parentElement.classList.add("current");
+                });
             });
-        });
-
-        // Tambahkan efek current saat klik langsung
-        const navAnchors = document.querySelectorAll("#nav a");
-        navAnchors.forEach((a) => {
-            a.addEventListener("click", function () {
-                navLinks.forEach((li) => li.classList.remove("current"));
-                this.parentElement.classList.add("current");
-            });
-        });
-    }, 100)
-}
+        }, 100)
+    }
 
     render() {
         if (!this.props.data) return null;
@@ -57,6 +57,7 @@ class Header extends Component {
                         <li><a className="smoothscroll" href="#about">About</a></li>
                         <li><a className="smoothscroll" href="#resume">Resume</a></li>
                         <li><a className="smoothscroll" href="#portfolio">Works</a></li>
+                        <li><a className="smoothscroll" href="#certificates">Certificates</a></li>
                         <li><a className="smoothscroll" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -71,13 +72,18 @@ class Header extends Component {
                         </Fade>
                         <Fade bottom duration={2000}>
                             <ul className="social">
-                                <a href={project} className="button btn project-btn">
-                                    <i className="fa fa-book"></i>Project
-                                </a>
-                                <a href={github} className="button btn github-btn">
-                                    <i className="fa fa-github"></i>Github
-                                </a>
+                                <li>
+                                    <a href={project} className="button btn project-btn">
+                                        <i className="fa fa-book"></i>Project
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={github} className="button btn github-btn">
+                                        <i className="fa fa-github"></i>Github
+                                    </a>
+                                </li>
                             </ul>
+
                         </Fade>
                     </div>
                 </div>

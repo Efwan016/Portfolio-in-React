@@ -2,6 +2,37 @@ import React, { Component } from "react";
 import { Fade, Slide, } from "react-awesome-reveal";
 
 class Contact extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            tweets: [], // 🔹 Daftar pesan terbaru
+        };
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const name = e.target.contactName.value || "Anon";
+        const message = e.target.contactMessage.value;
+
+        if (!message.trim()) return;
+
+        // 🔹 Tambahkan pesan baru ke state
+        this.setState((prevState) => ({
+            tweets: [
+                {
+                    name,
+                    message,
+                    time: new Date().toLocaleString(),
+                },
+                ...prevState.tweets,
+            ],
+        }));
+
+        // 🔹 Reset form
+        e.target.reset();
+    };
+
+
     render() {
         if (!this.props.data) return null;
         const name = this.props.data.name;
@@ -31,7 +62,7 @@ class Contact extends Component {
                 <div className="row">
                     <Slide left duration={1000} triggerOnce>
                         <div className="eight columns">
-                            <form action="" method="post" id="contactForm" name="contactForm">
+                            <form onSubmit={this.handleSubmit} id="contactForm" name="contactForm">
                                 <fieldset>
                                     <div>
                                         <label htmlFor="contactName">
@@ -78,8 +109,8 @@ class Contact extends Component {
                                             Message <span className="required">*</span>
                                         </label>
                                         <textarea
-                                            cols="50"
-                                            rows="25"
+                                            cols="40"
+                                            rows="6"
                                             id="contactMessage"
                                             name="contactMessage"
                                         ></textarea>
@@ -119,26 +150,42 @@ class Contact extends Component {
                             <div className="widget widget_tweets">
                                 <h4 className="widget-title">Latest Tweets</h4>
                                 <ul id="twitter">
-                                    <li>
-                                        <span>
-                                            Saya bahagia kemarin<br />
-                                            <a href="./">http://t.co/CGIrdxIlI3</a>
-                                        </span>
-                                        <b>
-                                            <a href="./">2 Days Ago</a>
-                                        </b>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            Semoga kamu baik-baik saja yaa
-                                            <br />
-                                            <a href="./">http://t.co/CGIrdxIlI3</a>
-                                        </span>
-                                        <b>
-                                            <a href="./">3 Days Ago</a>
-                                        </b>
-                                    </li>
+                                    {this.state.tweets.length === 0 ? (
+                                        <>
+                                            <li>
+                                                <span>
+                                                    Saya bahagia kemarin<br />
+                                                    <a href="./">http://t.co/CGIrdxIlI3</a>
+                                                </span>
+                                                <b>
+                                                    <a href="./">2 Days Ago</a>
+                                                </b>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Semoga kamu baik-baik saja yaa<br />
+                                                    <a href="./">http://t.co/CGIrdxIlI3</a>
+                                                </span>
+                                                <b>
+                                                    <a href="./">3 Days Ago</a>
+                                                </b>
+                                            </li>
+                                        </>
+                                    ) : (
+                                        this.state.tweets.map((tweet, index) => (
+                                            <li key={index}>
+                                                <span>
+                                                    {tweet.message} <br />
+                                                    <a href="./">from {tweet.name}</a>
+                                                </span>
+                                                <b>
+                                                    <a href="./">{tweet.time}</a>
+                                                </b>
+                                            </li>
+                                        ))
+                                    )}
                                 </ul>
+
                             </div>
                         </aside>
                     </Slide>

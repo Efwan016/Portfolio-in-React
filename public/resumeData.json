@@ -119,5 +119,23 @@
                 "url":"https://www.canadianwanderlust.com"
               }
     ]
-}
+},
+
+"certificates": [
+   {
+    "title": "Frontend - Fundamentals",
+    "issuer": "MySkill.id",
+    "date": "August 2024",
+    "link": "https://drive.google.com/your-link-certificate-1",
+    "image": "image/certificates/Fronted-Fundamentals.png"
+  },
+  {
+    "title": "Frontend - Css",
+    "issuer": "MySkill.id",
+    "date": "June 2025",
+    "link": "https://www.freecodecamp.org/certificate/username/responsive-web-design",
+    "image": "image/certificates/Frontend-Css.png"
+  }
+]
+
 }
