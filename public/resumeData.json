@@ -128,7 +128,14 @@
       "issuer": "MySkill.id",
       "date": "June 2025",
       "link": "https://drive.google.com/file/d/1WcwGyGUUKgb2S2BZDLIRbp_UgLdmVGRN/view?usp=sharing",
-      "image": "image/certificates/Frontend-Javascript.png"
+      "image": "image/certificates/Frontend-React.png"
+    },
+    {
+      "title": "Frontend - Development libraries",
+      "issuer": "freecodecamp.org",
+      "date": "July 2025",
+      "link": "https://www.freecodecamp.org/certification/Vrz/front-end-development-libraries",
+      "image": "image/certificates/Frontend-Libraries.png"
     }
   ]
 }
