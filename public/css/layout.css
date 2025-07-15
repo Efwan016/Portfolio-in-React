@@ -1206,21 +1206,21 @@ footer .social-links li:first-child { margin-left: 0; }
    border-radius: 10px;
 }
 
-/* Whatsapp Pop-up */
-/* Floating WhatsApp Button - pojok kiri bawah */
+/* Whatsapp Pop-up - pojok kiri bawah */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 30px;
+  left: 30px;
   width: 60px;
   height: 60px;
   background-color: #25d366;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  text-decoration: none;
   transition: transform 0.3s;
 }
 
@@ -1232,6 +1232,7 @@ footer .social-links li:first-child { margin-left: 0; }
   width: 35px;
   height: 35px;
 }
+
 
 
 .whatsapp-icon {
