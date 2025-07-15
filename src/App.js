@@ -54,7 +54,6 @@ class App extends Component {
         <Contact data={this.state.resumeData.main} />
         <Certificates data={this.state.resumeData.certificates || []} />
         <Footer data={this.state.resumeData.main} />
-        <whatsapp />
     </a>
       </div>
     )
