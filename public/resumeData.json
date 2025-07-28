@@ -98,6 +98,12 @@
         "category": "CV",
         "image": "02.jpg",
         "url": "https://efwan016.github.io/my-portfolio/"
+      },
+      {
+        "title": "Building House Garden with React.js",
+        "category": "Glacier Graha Residence",
+        "image": "03.png",
+        "url": "https://efwan-s-project-01.vercel.app/"
       }
     ]
   },
