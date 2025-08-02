@@ -9,7 +9,6 @@ import Resume from './Component/Resume';
 import Portfolio from './Component/Portfolio';
 import Footer from './Component/Footer';
 import Certificates from './Component/Certificates';
-import Whatsapp from './Component/Whatsapp';
 
 class App extends Component {
   constructor(props) {
@@ -51,10 +50,9 @@ class App extends Component {
         <About data={this.state.resumeData.main} />
         <Resume data={this.state.resumeData.resume} />
         <Portfolio data={this.state.resumeData.portfolio} />
-        <Contact data={this.state.resumeData.main} />
         <Certificates data={this.state.resumeData.certificates || []} />
+        <Contact data={this.state.resumeData.main} />
         <Footer data={this.state.resumeData.main} />
-    </a>
       </div>
     )
   }

@@ -104,6 +104,12 @@
         "category": "Glacier Graha Residence",
         "image": "03.png",
         "url": "https://efwan-s-project-01.vercel.app/"
+      },
+      {
+        "title": "Building Quiz Web App with React.js",
+        "category": "Quiz Web App",
+        "image": "Quiz-App.png",
+        "url": "https://project-quiz-pi.vercel.app/quiz/login"
       }
     ]
   },
@@ -119,21 +125,21 @@
       "title": "Frontend - Css",
       "issuer": "MySkill.id",
       "date": "June 2025",
-      "link": "https://drive.google.com/file/d/1g1MmS5xXYP3TyB_jEDd8PLHb611S4aBI/view?usp=drive_link",
+      "link": "https://storage.googleapis.com/myskill-v2-certificates/topic-3YOVteyOsJgXG53NqXy9/s9xP9CommdQMOnnkc5yOGC6o6WG3-pgGXe4SJs0t5C6iKkqE0.pdf",
       "image": "image/certificates/Frontend-Css.png"
     },
     {
       "title": "Frontend - JavaScript",
       "issuer": "MySkill.id",
       "date": "June 2025",
-      "link": "https://drive.google.com/file/d/1RwhTzKEMwg8BbRisEwiGvek43cZTjQfR/view?usp=drive_link",
+      "link": "https://storage.googleapis.com/myskill-v2-certificates/topic-pTLX6J38RGSQ4dfEO6yQ/s9xP9CommdQMOnnkc5yOGC6o6WG3-wDq5RebpwI11MegBCTZi.pdf",
       "image": "image/certificates/Frontend-Javascript.png"
     },
     {
       "title": "Frontend - React",
       "issuer": "MySkill.id",
       "date": "June 2025",
-      "link": "https://drive.google.com/file/d/1WcwGyGUUKgb2S2BZDLIRbp_UgLdmVGRN/view?usp=sharing",
+      "link": "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/s9xP9CommdQMOnnkc5yOGC6o6WG3-8bdIrKJjPMaCfNzROrgo.pdf",
       "image": "image/certificates/Frontend-React.png"
     },
     {
@@ -142,6 +148,13 @@
       "date": "July 2025",
       "link": "https://www.freecodecamp.org/certification/Vrz/front-end-development-libraries",
       "image": "image/certificates/Frontend-Libraries.png"
+    },
+    {
+      "title": "Frontend - Project Portfolio",
+      "issuer": "MySkill.id",
+      "date": "August 2025",
+      "link": "https://storage.googleapis.com/myskill-v2-certificates/topic-XUbCkJeUsxh532l1vNjz/s9xP9CommdQMOnnkc5yOGC6o6WG3-b7T3tvht9YGH2RA8C5Ku.pdf",
+      "image": "image/certificates/Frontend-Project.png"
     }
   ]
 }
